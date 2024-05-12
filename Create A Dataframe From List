@@ -3,3 +3,16 @@ import pandas as pd
 def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
     df = pd.DataFrame(student_data, columns=['student_id', 'age'])
     return df
+
+EXPLANATION = 
+df = pd.DataFrame(student_data, columns=['student_id', 'age'])
+
+This line creates the data frame using the pd.DataFrame constructor.
+
+The constructor takes two arguments:
+student_data: This is the 2D list containing student data (IDs and ages) passed as an argument to the function.
+columns=['student_id', 'age']: This dictionary defines the column names for the DataFrame. The keys are arbitrary names for the columns, and the values are the actual column names you want to use ('student_id' and 'age' in this case).
+
+NOW WE SEE HOW THE FULL ABOVE PART WORKS:
+- The pd.The dataFrame constructor takes the student_data list and interprets it as rows in the dataFrame. Each inner list becomes a single row.
+- The provided dictionary {'student_id', 'age'} defines the column names for the DataFrame. These names are associated with the corresponding elements in each row of the student_data list. For example, the first element in each row (likely the student ID) will be assigned to the 'student_id' column, and the second element (likely the age) will be assigned to the 'age' column.
