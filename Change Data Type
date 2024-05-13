@@ -2,3 +2,13 @@ import pandas as pd
 def changeDatatype(students: pd.DataFrame) -> pd.DataFrame:
     students['grade']=students['grade'].astype(int)
     return students
+
+EXPLANATION = 
+
+- students['grade']=students['grade'].astype(int): 
+
+This line selects the grade column from the student's DataFrame and uses the astype() method to convert its data type to integer (int). By assigning it back to students['grade'], the original DataFrame is updated with the corrected data type for the grade column.
+
+- return students: 
+
+Finally, the function returns the modified data frame.
