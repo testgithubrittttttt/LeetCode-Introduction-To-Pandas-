@@ -4,3 +4,10 @@ def fillMissingValues(products: pd.DataFrame) -> pd.DataFrame:
     products["quantity"].fillna(0, inplace = True) 
     return products
     
+EXPLANATION = 
+
+- .fillna() method: The .fillna() method is called on the "quantity" column of the DataFrame (products["quantity"]). This method is used to fill NaN (missing) values in a data frame with specified values. In this case, it fills missing values with 0.
+
+- .inplace parameter: The inplace=True parameter ensures that the changes made by .fillna() are applied directly to the original DataFrame products. This means that the original DataFrame is modified in place, rather than creating a new copy with the changes.
+
+- Return statement: Finally, the function returns the modified DataFrame, which now has missing values in the "quantity" column filled with zeros.
