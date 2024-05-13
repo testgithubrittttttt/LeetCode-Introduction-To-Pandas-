@@ -1,0 +1,11 @@
+import pandas as pd
+
+def selectData(students: pd.DataFrame) -> pd.DataFrame:
+    return students. loc[students["student_id"] == 101, ["name", "age"]]
+
+EXPLANATION = 
+- Inside the function, it uses the loc method of the DataFrame (students) to locate rows based on a specific condition.
+
+- The condition specified is students["student_id"] == 101, which filters the DataFrame to only include rows where the student_id column has a value equal to 101.
+
+- The second argument of loc is ["name", "age"], which specifies the columns to be selected from the filtered rows. So, it selects the name and age columns for the student with student_id equal to 101.
