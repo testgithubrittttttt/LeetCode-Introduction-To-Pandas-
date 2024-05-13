@@ -2,3 +2,13 @@ import pandas as pd
 
 def dropMissingData(students: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(students)[students['name'].notnull()]
+
+EXPLANATION = 
+
+- DataFrame Copy: Inside the function, a new DataFrame is created by calling pd.DataFrame(students). This step creates a copy of the original data frame to ensure that modifications do not affect the original data.
+
+- Removing Rows with Missing Values: The code then applies a boolean indexing technique to select rows where the 'name' column is not null. This is achieved by using the notnull() method on the 'name' column: students['name'].notnull(). This returns a boolean mask indicating True for non-null values and False for null values in the 'name' column.
+
+- Filtering Rows: The boolean mask obtained in the previous step filters the rows of the copied DataFrame. Only the rows where the 'name' column is not null are retained, effectively removing rows with missing values in the 'name' column.
+
+- Returning the Modified DataFrame: Finally, the modified DataFrame, containing only the rows with non-null values in the 'name' column, is returned.
