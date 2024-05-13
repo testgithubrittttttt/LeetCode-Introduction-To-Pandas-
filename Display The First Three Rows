@@ -2,3 +2,6 @@ import pandas as pd
 
 def selectFirstRows(df: pd.DataFrame) -> pd.DataFrame:
     return df.head(3)#THIS IS THE LINE WHICH IS USED FOR PRESENTING THE ROWS AND COLUMNS OF THE DATAFRAME
+
+EXPLANATION = 
+The line returns df. head(3) is the function's core. It utilizes the head method of the DataFrame object (df). The head(n) method retrieves and returns the first n rows of the DataFrame. In this case, we're specifying n=3 to get the first 3 rows
