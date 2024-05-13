@@ -3,3 +3,10 @@ import pandas as pd
 def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
     employees['bonus'] = employees['salary'] * 2
     return employees
+
+EXPLANATION = 
+
+employees['bonus'] = employees['salary'] * 2: 
+ThE ABOVE WRITTEN line adds a new column named 'bonus' to the 'employees' DataFrame. It assigns the values of the 'salary' column multiplied by 2 to the new 'bonus' column. This effectively doubles the salary values and stores them in the 'bonus' column.
+
+return employees: This line returns the modified DataFrame with the new 'bonus' column added.
