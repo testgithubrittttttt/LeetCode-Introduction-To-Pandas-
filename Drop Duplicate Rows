@@ -3,3 +3,11 @@ import pandas as pd
 def dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:
     customers.drop_duplicates(subset='email', keep='first', inplace=True)
     return customers
+
+EXPLANATION = 
+
+WHY USING THIS LINE = customers.drop_duplicates(subset='email', keep='first', inplace=True) = 
+- subset = email: Specifies that duplicate rows should be identified based on the values in the 'email' column.
+- keep = first: Specifies to keep the first occurrence of each duplicate row and remove subsequent occurrences.
+- inplace = True: Modifies the DataFrame in place, meaning the changes are applied directly to the original DataFrame customers.
+- Returning Modified DataFrame: Finally, the modified DataFrame with duplicate rows removed is returned from the function.
