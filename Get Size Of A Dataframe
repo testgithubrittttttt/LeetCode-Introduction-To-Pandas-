@@ -2,3 +2,13 @@ import pandas as pd
 
 def getDataframeSize(players: pd.DataFrame) -> List[int]:
     return list(players.shape)
+
+EXPLANATION = 
+Using players.shape:
+
+Inside the function, the line return list(players. shape) directly accesses the shape attribute of the player's DataFrame. This attribute is a built-in property in Pandas that returns a tuple containing two elements:
+
+- The first element represents the number of rows (indices) in the data frame.
+- The second element represents the number of columns in the data frame.
+
+By using list(players. shape), the function converts the tuple returned by shape into a Python list, which is the expected return type mentioned in the function definition (-> List[int]).
