@@ -3,3 +3,13 @@ import pandas as pd
 def renameColumns(students: pd.DataFrame) -> pd.DataFrame:
     students.rename(columns={'id': 'student_id', 'first': 'first_name', 'last': 'last_name', 'age': 'age_in_years'}, inplace=True)
     return students
+
+EXPLANATION = 
+
+- Column Renaming: The rename method is applied to the student's DataFrame. This method allows renaming columns based on a dictionary mapping the old column names to the new ones. The inplace=True argument ensures that the changes are made directly to the original DataFrame, rather than creating a new copy.
+
+  students.rename(columns={'id': 'student_id', 'first': 'first_name', 'last': 'last_name', 'age': 'age_in_years'}, inplace=True)
+
+- Returning the DataFrame: Finally, the function returns the modified students' DataFrame with the column names updated.
+
+  return students
