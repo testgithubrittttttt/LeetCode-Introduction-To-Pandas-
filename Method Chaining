@@ -3,3 +3,13 @@ import pandas as pd
 def findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:
     animals = animals.sort_values(by='weight', ascending=False)
     return animals.loc[animals["weight"] > 100, ['name']]
+
+Explanation:
+
+- import pandas as pd: This line imports the pandas library and assigns it the alias pd so that we can refer to pandas functions and objects more conveniently throughout the code.
+
+- def findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:: This line defines a function named findHeavyAnimals. It takes one argument, animals, which is expected to be a pandaS DataFrame. The function is expected to return a pandas DataFrame as well.The -> pd.DataFrame notation indicates the return type of the function.
+
+- animals = animals.sort_values(by='weight', ascending=False): This line sorts the DataFrame animals by the column 'weight' in descending order using the sort_values() method. This ensures that animals with higher weights appear first in the dataframe.
+
+- return animals. loc[animals["weight"] > 100, ['name']]: This line returns a subset of the DataFrame animals. It selects rows where the 'weight' column value is greater than 100 using boolean indexing (animals["weight"] > 100) and then selects only the 'name' column for those rows using .loc[]. Finally, it returns this subset of names of animals that weigh more than 100 kilograms.
