@@ -2,3 +2,19 @@ import pandas as pd
 
 def pivotTable(weather: pd.DataFrame) -> pd.DataFrame:
     return weather.pivot_table(index='month', columns='city', values='temperature', aggfunc='max')
+
+EXPLANATION = 
+
+- Importing pandas: The code starts by importing the pandas library, which is a powerful tool for data manipulation and analysis.
+
+- Function Definition: The code defines a function named PivotTable that takes a pandas DataFrame named weather as input and returns a modified DataFrame.
+
+- DataFrame Pivot: The function's core is the pivot_table method applied to the weather DataFrame. This method is used to reshape the data in the DataFrame.
+
+- Parameters of pivot_table:
+   index='month': This parameter specifies that the 'month' column in the DataFrame will be used as the index for the new DataFrame.
+   columns='city': This parameter specifies that unique values in the 'city' column will be used to create separate columns in the new DataFrame.
+   values='temperature': This parameter specifies that the values in the 'temperature' column will be used to fill the cells of the new DataFrame.
+   aggfunc='max': This parameter specifies the aggregation function to be applied if there are multiple values for the same combination of index and column. Here, 'max' is used, meaning that the maximum temperature value for each combination of month and city will be retained.
+
+-Return Value: The resulting DataFrame, obtained after pivoting the original DataFrame, is returned by the function.
