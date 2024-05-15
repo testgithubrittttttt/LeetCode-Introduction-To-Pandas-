@@ -3,3 +3,22 @@ import pandas as pd
 def meltTable(report: pd.DataFrame) -> pd.DataFrame:
     result=pd.melt(report,id_vars=['product'],var_name='quarter',value_name='sales')
     return result
+
+EXPLANATION = 
+- Importing pandas: The import pandas as pd statement imports the pandas' library and aliases it as pd, which is a common convention in Python.
+
+- Function Definition:
+  def meltTable(report: pd.DataFrame) -> pd.DataFrame:: This line defines a function named meltTable that takes a pandas DataFrame named report as input and returns another pandas DataFrame. The type hints (pd.DataFrame) specify that the input and output should be pandas DataFrames.
+
+- Reshaping the DataFrame:
+  pd.melt(report, id_vars=['product'], var_name='quarter', value_name='sales'): This line uses the melt() function provided by pandas to reshape the DataFrame.
+    - the report is the data frame to be reshaped.
+    - id_vars=['product'] specifies the column(s) to be retained in the reshaped DataFrame without transformation. In this case, it keeps the 'product' column intact.
+    - var_name='quarter' specifies the name to be used for the variable column that will contain the quarter names.
+    - value_name='sales' specifies the name to be used for the column that will contain the sales data.
+
+  The result of this operation is assigned to the variable result.
+
+- Return Statement:
+
+return result: This line returns the reshaped DataFrame, which contains sales data for each product in a specific quarter.
